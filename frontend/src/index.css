@@ -1,0 +1,49 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  background: radial-gradient(circle at top left, #1b1b20 0%, #0a0a0c 60%);
+}
+
+@layer components {
+  .glass-panel {
+    @apply bg-pit-panel/60 backdrop-blur-md border border-pit-border rounded-2xl shadow-glass;
+  }
+
+  .glass-panel-hover {
+    @apply transition-all duration-200 hover:border-pit-red/50 hover:shadow-glow;
+  }
+
+  .stat-label {
+    @apply text-xs uppercase tracking-widest text-pit-muted;
+  }
+
+  .page-title {
+    @apply text-2xl font-bold text-pit-text tracking-tight;
+  }
+
+  .badge {
+    @apply px-2 py-0.5 rounded-full text-xs font-semibold;
+  }
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #2a2a31;
+  border-radius: 8px;
+}
